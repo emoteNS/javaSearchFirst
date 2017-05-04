@@ -17,9 +17,9 @@ public class DemoDataApplicationTests {
 	@Test
 	public void contextLoads() {
 
-		airportRepository.save(new Airport());
+		//airportRepository.save(new Airport());
 
-		airportRepository.findByIataLike("");
+		//airportRepository.findByIataLike("");
 
 	}
 

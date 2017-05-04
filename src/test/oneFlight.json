@@ -1,0 +1,10 @@
+{
+  "code" : 200,
+  "content" :
+  {
+    "airports" :
+    [
+      { "id": 1, "name" : "Aeropuerto", "city" : "Mexico City", "country" : "Mexico", "iata" : "MEX" }
+    ]
+  }
+}

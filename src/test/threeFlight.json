@@ -1,0 +1,12 @@
+{
+  "code" : 200,
+  "content" :
+  {
+    "airports" :
+    [
+      { "id": 1, "name" : "Aeropuerto", "city" : "Mexico City", "country" : "Mexico", "iata" : "MEX" },
+      { "id": 2, "name" : "Puebla Air", "city" : "Puebla City", "country" : "Mexico", "iata" : "PBC" },
+      { "id": 3, "name" : "Airport", "city" : "Washington", "country" : "USA", "iata" : "USA" }
+    ]
+  }
+}

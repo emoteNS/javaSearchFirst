@@ -1,0 +1,4 @@
+{
+  "code": 401,
+  "content": { "errorMessage": "Incorrect API key"}
+}

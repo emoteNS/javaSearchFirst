@@ -1,0 +1,14 @@
+{
+  "status":200,
+  "message":"",
+  "content":
+  [
+    {
+      "id":1,
+      "name":"Madang Airport",
+      "city":"Madang",
+      "country":"Papua New Guinea",
+      "iata":"MAG",
+      "type":"airport"}
+  ]
+}

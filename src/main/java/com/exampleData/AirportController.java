@@ -1,5 +1,6 @@
 package com.exampleData;
 
+import com.exampleData.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,16 @@ public class AirportController {
     @RequestMapping("/search")
     public List<Airport> search(@Param("query") String query){
 
-        //return airportRepository.findAirportByCityOrIataLike( query, query );
-        //return airportRepository.findByIataLike(query);
-        return airportRepository.findByCityLikeAndIataLikeIgnoreCase(query, query);
+        return airportRepository.findByCityIgnoreCaseRegex(query);
+    }
+
+    @RequestMapping("/api/airports")
+    public Response searchAirport(@Param("pattern") String pattern, @Param("key") String key){
+
+        return Response.getResponseInstance(
+                200,
+                "",
+                airportRepository.findDistinctAirportByCityOrIataLike(pattern, pattern));
+
     }
 }

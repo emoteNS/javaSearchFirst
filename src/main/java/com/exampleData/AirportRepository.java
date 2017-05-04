@@ -15,14 +15,10 @@ import java.util.List;
 @Repository
 public interface AirportRepository extends MongoRepository<Airport, String>{
 
-    List<Airport> findByCity(@Param("city") String city);
-    List<Airport> findByIata(@Param("iata") String iata);
-    List<Airport> findByCityAndIata(@Param("city") String city, @Param("iata") String iata);
-
-    List<Airport> findByIataLike(@Param("iata") String iata);
-    //List<Airport> findByCityLikeOrIataLikeIgnoreCase(@Param("city") String city);
-    List<Airport> findByCityLikeAndIataLikeIgnoreCase(@Param("city") String city, @Param("iata") String iata);
+    List<Airport> findByCityIgnoreCaseRegex(@Param("city") String city);
 
     List<Airport> findAirportByCityOrIataLike(@Param("city") String city, @Param("iata") String iata);
+
+    List<Airport> findDistinctAirportByCityOrIataLike(@Param("city") String city, @Param("iata") String iata);
 
 }
